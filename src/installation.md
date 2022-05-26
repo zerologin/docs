@@ -20,6 +20,7 @@ yarn install
 Duplicate `.env.example` file to `.env` and change these variables
 ```
 APP_URL=http://localhost:3333 # it should be localhost:3333 in dev and your domain name in production
+APP_KEY=
 PG_HOST=localhost
 PG_PORT=5432
 PG_USER=root
@@ -27,6 +28,8 @@ PG_PASSWORD=root
 PG_DB_NAME=zerologin
 JWT_SECRET=ChangeMe
 ```
+
+`APP_KEY` can be generated using the command `node ace generate:key`. This param will be used to encrypt users jwt secrets
 
 ## DB migrations
 ```bash
