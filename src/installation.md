@@ -1,5 +1,7 @@
 # Installation
 
+This guide is for installing Zerologin on your own server. If you want to use a running instance (like [zerologin.co](https://zerologin.co)), please check [How to use Zerologin on my website](/how-to-use-zerologin)
+
 ## Prerequisite
 - Node.js LTS >= 16.5.0
 - Yarn
@@ -49,4 +51,24 @@ yarn build #.env will be copied if exists and DB migrations will be done at this
 cd build/
 yarn install --production
 node server.js # or use ecosystem.config.js with pm2
+```
+
+### Reverse proxy using Caddy
+
+[Caddy](https://caddyserver.com/) can easily be used as reverse proxy. Here is an example Caddyfile.
+
+The tls on_demand is required for automatic TLS certificats delivering for your users. 
+
+```
+http://myzerologin-instance.com {
+  reverse_proxy localhost:3333
+}
+
+:443 {
+  reverse_proxy localhost:3333
+
+  tls your@email.com {
+    on_demand
+  }
+}
 ```

@@ -54,6 +54,7 @@ module.exports = {
           children: [
             '',
             'installation',
+            'how-to-use-zerologin',
           ]
         }
       ],
