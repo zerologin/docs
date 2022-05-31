@@ -55,6 +55,7 @@ module.exports = {
             '',
             'installation',
             'how-to-use-zerologin',
+            'dev-environment',
           ]
         }
       ],
