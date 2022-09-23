@@ -54,8 +54,8 @@ module.exports = {
           children: [
             '',
             'installation',
-            'how-to-use-zerologin',
-            'dev-environment',
+            'backend-configuration',
+            'frontend-configuration',
           ]
         }
       ],

@@ -60,7 +60,7 @@ node server.js # or use ecosystem.config.js with pm2
 
 [Caddy](https://caddyserver.com/) can easily be used as reverse proxy. Here is an example Caddyfile.
 
-The tls on_demand is required for automatic TLS certificats delivering for your users. 
+The tls on_demand is required for automatic TLS certificats delivering for your users. **Tls on demand isn't required if you don't want to expose your instance for other users.**
 
 ```
 http://myzerologin-instance.com {
