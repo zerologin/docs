@@ -56,6 +56,7 @@ module.exports = {
             'installation',
             'backend-configuration',
             'frontend-configuration',
+            'docker'
           ]
         }
       ],
